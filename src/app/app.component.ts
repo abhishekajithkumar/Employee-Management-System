@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ApiService } from './services/api.service';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Employee';
+  title = 'Employee Management System';
+
+constructor(private router: Router, private Http: HttpClient){}
+
+
+
+logout(){
+    localStorage.clear();
+    this.router.navigate(["./login"]);
+  }
 }

@@ -1,0 +1,81 @@
+<app-employee-navbar></app-employee-navbar>
+
+<div class="container">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Apply leave
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Request for leave </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <label>Type of leave</label>
+                        <select class="form-select" [(ngModel)]="leaveType" name="leaveType">
+                            <option selected>Select leave type</option>
+                            <option value="Paid">Paid leave</option>
+                            <option value="Sick">Sick Leave</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label>No: of Days</label>
+                        <input type="number" class="form-control" [(ngModel)]="days" name="days">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Start date</label>
+                        <input type="date" class="form-control" [(ngModel)]="startdate" name="startdate">
+                    </div>
+                    <div class="col">
+                        <label>End date</label>
+                        <input type="date" class="form-control" [(ngModel)]="enddate" name="enddate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Reason for taking leave</label>
+                        <textarea class="form-control" placeholder="Leave a reason here"
+                            id="floatingTextarea" [(ngModel)]="reason" name="reason"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="applyLeave(user.id)">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Type of Leave</th>
+        <th scope="col">No. of Days</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Reason</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let item of user.leaveDetails; let i = index">
+        <th scope="row"> {{i+1}}</th>
+        <td>{{item?.leaveType}}</td>
+        <td>{{item?.days}}</td> 
+        <td>{{item?.start}}</td> 
+         <td>{{item?.end}}</td>
+         <td>{{item?.reason}}</td>
+      </tr>
+    </tbody>
+  </table> 
+</div>

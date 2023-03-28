@@ -1,0 +1,47 @@
+<!-- <div class="outer">
+    <h4><b>LOGIN</b></h4>
+    <div class="container card">
+
+        <div class="container card-body">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="name" [(ngModel)]="userData.name">
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="userData.password">
+
+                </div>
+                <div class="text-center m-3">
+                    <button type="submit" class="btn btn-outline-light">Login</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+<div class="card border-info mb-3 outer" style="max-width: 25rem;">
+    <div class="card-header">
+        <h4 class="text-center"><b>LOGIN</b></h4>
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="name" [(ngModel)]="userData.name">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="userData.password">
+            </div>
+            <div class="text-center m-3">
+                <button type="submit" class="btn btn-outline-info">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,451 @@
+{
+  "hrlogin": [
+    {
+      "username": "admin",
+      "password": "password"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Melvin",
+      "surname": "John",
+      "role": "Data Analyst",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "A+",
+      "gender": "Male",
+      "email": "melvinj@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo1.jpg",
+      "leave": 4,
+      "status": "Active",
+      "previousWeekLeave": 2,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Daniel",
+      "surname": "Johnson",
+      "role": "Business Analyst",
+      "age": 32,
+      "dob": "1992-12-14",
+      "blood": "AB+",
+      "gender": "Male",
+      "email": "danielj@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo2.jpg",
+      "leave": 5,
+      "status": "Active",
+      "previousWeekLeave": 1,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 1,
+          "start": "2023-03-31",
+          "end": "2023-03-31",
+          "reason": "Marriage function"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Alan",
+      "surname": "Smith",
+      "role": "IT Recruiter",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "A+",
+      "gender": "Male",
+      "email": "alans@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo3.jpg",
+      "leave": 4,
+      "status": "Active",
+      "previousWeekLeave": 2,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Justin",
+      "surname": "Peterson",
+      "role": "Team Lead",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "O+",
+      "gender": "Male",
+      "email": "justinp@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo4.jpg",
+      "leave": 4,
+      "status": "Active",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ],
+      "previousWeekLeave": 1,
+      "currentWeekLeave": 0,
+      "currentWeek": "13"
+    },
+    {
+      "id": 5,
+      "name": "Kevin",
+      "surname": "Oliver",
+      "role": "Data Analyst",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "B-",
+      "gender": "Male",
+      "email": "kevino@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo5.jpg",
+      "leave": 4,
+      "status": "Active",
+      "previousWeekLeave": 1,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Simon",
+      "surname": "Alex",
+      "role": "Operations Manager",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "B+",
+      "gender": "Male",
+      "email": "simona@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo6.jpg",
+      "leave": 4,
+      "status": "Inactive",
+      "previousWeekLeave": 0,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Stella",
+      "surname": "Wilson",
+      "role": "Data Analyst",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "A+",
+      "gender": "Female",
+      "email": "stellaw@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo7.jpg",
+      "leave": 5,
+      "status": "Active",
+      "previousWeekLeave": 0,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 1,
+          "start": "2023-03-22",
+          "end": "2023-03-22",
+          "reason": "Family function"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Linda",
+      "surname": "Perry",
+      "role": "Product Analyst",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "O-",
+      "gender": "Female",
+      "email": "lindap@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password",
+      "photo": "Photo8.jpg",
+      "leave": 6,
+      "status": "Inactive",
+      "previousWeekLeave": 0,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        },
+        {
+          "leaveType": "Sick",
+          "days": 2,
+          "start": "2023-03-29",
+          "end": "2023-03-30",
+          "reason": "Linda trip"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Violet",
+      "surname": "Lee",
+      "role": "Trainee",
+      "age": 24,
+      "dob": "1988-02-17",
+      "blood": "O+",
+      "gender": "Female",
+      "email": "violetl@cmpy.com",
+      "mobile": 9947060643,
+      "password": "password1",
+      "photo": "Photo9.jpg",
+      "status": "Inactive",
+      "previousWeekLeave": 0,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leave": 4,
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    },
+    {
+      "name": "Richard",
+      "surname": "Smith",
+      "role": "Software Engineer",
+      "dob": "1996-06-13",
+      "age": 25,
+      "gender": "Male",
+      "blood": "B+",
+      "email": "richards@cmpy.com",
+      "password": "password",
+      "mobile": "1223344556",
+      "photo": "Photo5.jpg",
+      "leave": 4,
+      "status": "Active",
+      "previousWeekLeave": 0,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "id": 10,
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    },
+    {
+      "name": "Gretel",
+      "surname": "Joe",
+      "role": "Team Lead",
+      "dob": "1998-04-07",
+      "age": 24,
+      "gender": "Female",
+      "blood": "B+",
+      "email": "gretelj@cmpy.com",
+      "password": "password",
+      "mobile": "7012424242",
+      "photo": "Photo9.jpg",
+      "leave": 4,
+      "status": "Inactive",
+      "previousWeekLeave": 0,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "id": 11,
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    },
+    {
+      "name": "Henry",
+      "surname": "Cage",
+      "role": "SM",
+      "dob": "2023-03-16",
+      "age": 23,
+      "gender": "Male",
+      "blood": "A+",
+      "email": "henryc@cmpy.com",
+      "password": "password",
+      "mobile": "9947320543",
+      "status": "Active",
+      "photo": "Photo6.jpg",
+      "id": 12,
+      "leave": 4,
+      "previousWeekLeave": 0,
+      "currentWeekLeave": 0,
+      "currentWeek": "13",
+      "leaveDetails": [
+        {
+          "leaveType": "Sick",
+          "days": 1,
+          "start": "2023-03-02",
+          "end": "2023-03-02",
+          "reason": "Sick"
+        },
+        {
+          "leaveType": "Paid",
+          "days": 3,
+          "start": "2023-03-13",
+          "end": "2023-03-15",
+          "reason": "Festival"
+        }
+      ]
+    }
+  ]
+}

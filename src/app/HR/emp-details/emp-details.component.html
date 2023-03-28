@@ -1,0 +1,374 @@
+<app-hr-navbar></app-hr-navbar>
+<div class="container">
+  <div class="text-center">
+    <h1>EMPLOYEE LIST</h1>
+  </div>
+
+  <div class="toolbar">
+    <div class="add-employee">
+      <button type="button" class="btn btn-outline-success btn-lg" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Add Employee</button>
+    </div>
+    <div class="search-employees">
+      <input type="search" class="form-control" placeholder="Search Employees">
+    </div>
+  </div>
+
+
+  <!-- Add employee Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New Employee Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div class="row">
+              <div class="col">
+                <label for="text" class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Name" [(ngModel)]="addName" name="addName" required>
+              </div>
+              <div class="col">
+                <label for="text" class="form-label">Surname</label>
+                <input type="text" class="form-control" placeholder="Surname" [(ngModel)]="addSurname"
+                  name="addSurname">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="text" class="form-label">Job Role</label>
+                <input type="text" class="form-control" placeholder="Job Role" [(ngModel)]="addRole" name="addRole">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="datepicker" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="datepicker" [(ngModel)]="addDob" name="addDob">
+              </div>
+              <div class="col">
+                <label for="text" class="form-label">Age</label>
+                <input type="number" class="form-control" placeholder="Age" [(ngModel)]="addAge" name="addAge">
+              </div>
+
+
+              <div class="row">
+                <div class="col">
+                  <label for="text" class="form-label">Gender</label>
+                  <select class="form-select" aria-label="Default select example" [(ngModel)]="addGender"
+                    name="addGender">
+                    <option selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Transgender">Transgender</option>
+                  </select>
+                </div>
+
+                <div class="col">
+                  <label for="text" class="form-label">Blood Group</label>
+                  <select class="form-select" aria-label="Default select example" [(ngModel)]="addBlood"
+                    name="addBlood">
+                    <option selected>Select Blood Group</option>
+                    <option value="O+">O+</option>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="O-">O-</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="AB-">AB-</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <label for="text" class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="Email" [(ngModel)]="addEmail" name="addEmail">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="text" class="form-label">Password</label>
+                  <input type="text" class="form-control" placeholder="Password" [(ngModel)]="addPassword"
+                    name="addPassword">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="text" class="form-label">Mobile</label>
+                  <input type="text" class="form-control" placeholder="Mobile" [(ngModel)]="addMobile" name="addMobile">
+                </div>
+                <div class="col">
+                  <label for="text" class="form-label">Employee Status</label>
+                  <select class="form-select" aria-label="Default select example" [(ngModel)]="addStatus"
+                    name="addStatus" aria-placeholder="Select Employee Status">
+                    <option selected>Select Employee Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="text" class="form-label">Profile Photo</label>
+                  <input type="file" class="form-control" placeholder="Profile Photo" [(ngModel)]="addPhoto"
+                    name="addPhoto"> <br>
+                </div>
+              </div>
+
+            </div>
+            <div class="row text-center">
+              <div class="col">
+                <button type="reset" class="btn btn-primary text-center">Reset</button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="addEmployee()">Add Employee Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Employees row-->
+  <table class="table table-bordered">
+    <tbody>
+      <div class="row row-border" *ngFor="let item of employeeData; let i = index">
+        <div class="col-1 text-center fw-bold">
+          {{i+1}}
+
+        </div>
+        <div class="col-2 text-center">
+          <img class="photo" src="../../assets/images/{{item?.photo}}">
+        </div>
+        <div class="col-9">
+          <div class="row justify-content-between employee-header">
+            <div class="col-6 titleFont">
+              <div><b>{{item?.name}} {{item?.surname}} </b>- {{item?.role}}</div>
+            </div>
+            <div class="col-4 text-end">
+              <button type="button" class="btn btn-outline-danger" (click)="deleteUser(item?.id)">Delete</button>
+              <button type="button" class="btn btn-outline-primary" (click)="editUser(item?.id)" data-bs-toggle="modal"
+                data-bs-target="#exampleModal2">
+                Edit
+              </button>
+            </div>
+
+            <!-- Edit Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModal2Label">Edit Employee Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <form>
+                      <div class="row">
+                        <div class="col">
+                          <label for="text" class="form-label">Name</label>
+                          <input type="text" class="form-control" [(ngModel)]="updateName" name="updateName">
+                        </div>
+                        <div class="col">
+                          <label for="text" class="form-label">Surname</label>
+                          <input type="text" class="form-control" [(ngModel)]="updateSurname" name="updateSurname">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <label for="text" class="form-label">Job Role</label>
+                          <input type="text" class="form-control" placeholder="Job Role" [(ngModel)]="updateRole"
+                            name="updateRole">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <label for="datepicker" class="form-label">Date of Birth</label>
+                          <input type="date" class="form-control" [(ngModel)]="updateDob" name="updateDob">
+                        </div>
+                        <div class="col">
+                          <label for="text" class="form-label">Age</label>
+                          <input type="number" class="form-control" placeholder="Age" [(ngModel)]="updateAge"
+                            name="updateAge">
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col">
+                            <label for="text" class="form-label">Gender</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="updateGender"
+                              name="updateGender">
+                              <option selected>Select Gender</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                              <option value="Transgender">Transgender</option>
+                            </select>
+                          </div>
+
+                          <div class="col">
+                            <label for="text" class="form-label">Blood Group</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="updateBlood"
+                              name="updateBlood">
+                              <option selected>Select Blood Group</option>
+                              <option value="O+">O+</option>
+                              <option value="A+">A+</option>
+                              <option value="B+">B+</option>
+                              <option value="AB+">AB+</option>
+                              <option value="O-">O-</option>
+                              <option value="A-">A-</option>
+                              <option value="B-">B-</option>
+                              <option value="AB-">AB-</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <label for="text" class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="updateEmail"
+                              name="updateEmail">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <label for="text" class="form-label">Password</label>
+                            <input type="text" class="form-control" placeholder="Password" [(ngModel)]="updatePassword"
+                              name="updatePassword">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <label for="text" class="form-label">Mobile</label>
+                            <input type="text" class="form-control" placeholder="Mobile" [(ngModel)]="updateMobile"
+                              name="updateMobile">
+                          </div>
+                          <div class="col">
+                            <label for="text" class="form-label">Employee Status</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="updateStatus"
+                              name="updateStatus">
+                              <option selected>Select Employee Status</option>
+                              <option value="Active">Active</option>
+                              <option value="Inactive">Inactive</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <label for="text" class="form-label">Profile Photo</label>
+                            <input type="file" class="form-control" placeholder="Profile Photo"
+                              (change)="fileUpdate($event)" [(ngModel)]="updatePhoto" name="updatePhoto">
+                          </div>
+                        </div>
+
+                      </div>
+                    </form>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                      (click)="updateUser()">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col-4 labelFont">Age </div>
+                <div class="col">: {{item?.age}}</div>
+              </div>
+              <div class="row">
+                <div class="col-4 labelFont">Blood Group</div>
+                <div class="col">: {{item?.blood}}</div>
+              </div>
+              <div class="row">
+                <div class="col-4 labelFont">Gender</div>
+                <div class="col">: {{item?.gender}}</div>
+              </div>
+              <div class="row">
+                <div class="col-4 labelFont">Status</div>
+                <div class="col">: {{item?.status}}</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="col-4 labelFont">Date of Birth</div>
+                <div class="col">: {{item?.dob}}</div>
+              </div>
+              <div class="row">
+                <div class="col-4 labelFont">Email</div>
+                <div class="col">: {{item?.email}}</div>
+              </div>
+              <div class="row">
+                <div class="col-4 labelFont">Mobile No. </div>
+                <div class="col">: {{item?.mobile}}</div>
+              </div>
+              <div class="row">
+                <div class="col-4 labelFont">Leaves </div>
+                <div class="col">: {{item?.leave}}</div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </tbody>
+  </table>
+
+  <!-- <table class="table table-bordered text-center">
+    <thead class="bg-primary">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Name</th>
+        <th scope="col">Role</th>
+        <th scope="col">Age</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Blood Group</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of employeeData; let i = index">
+        <td>{{i+1}}</td>
+        <td><img class="photo" src="{{item?.photo}}"></td>
+        <td>{{item?.name}}</td>
+        <td>{{item?.role}}</td>
+        <td>{{item?.age}}</td>
+        <td>{{item?.dob}}</td>
+        <td>{{item?.blood}}</td>
+        <td>{{item?.gender}}</td>
+        <td>{{item?.email}}</td>
+        <td>{{item?.mobile}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div> -->
